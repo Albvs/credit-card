@@ -1,11 +1,20 @@
 package pl.jkan.creditcard;
 
 class CreditCard {
-    public void assignLimit(double limit) {
-        
-    }   
+    private double limit = 0; 
+    private boolean blockade = false;
     
-    public double getLimit() {
-        return 2000;
+    public void assignLimit(double limit) {
+        this.limit = limit;
+    }
+    public void block(){
+        this.blockade = true; 
+    }
+    public double getLimit(){
+        return limit;
+    }
+    
+    public boolean isBlocked(){
+        return blockade;
     }
 }
