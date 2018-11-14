@@ -17,4 +17,11 @@ class CreditCard {
     public boolean isBlocked(){
         return blockade;
     }
+    public void withdraw(double value){
+        if (this.limit < value || this.blockade) System.out.print("Can't withdraw!!");
+        else this.limit -= value;
+    }
+    public void repay(double momney){
+        this.limit += money;
+    }
 }
